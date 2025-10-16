@@ -1,0 +1,282 @@
+/* Reset y fuente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  background: linear-gradient(135deg, #f0fdfc 60%, #aeecef 100%);
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+  background: #aeecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2463a5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Menú navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+}
+nav a {
+  text-decoration: none;
+  color: #2463a5;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 8px;
+  transition: background .2s, color .2s;
+}
+nav a:hover {
+  background: #ffd966;
+  color: #333;
+}
+
+/* Hero principal */
+.hero {
+  background: linear-gradient(90deg, #ffd966 70%, #c1e1c1 100%);
+  text-align: center;
+  padding: 3.5rem 2rem 2.5rem 2rem;
+  box-shadow: 0 1px 12px rgba(36,99,165,0.09);
+  animation: fadeInDown 1.2s;
+}
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+  color: #2463a5;
+}
+.hero p {
+  font-size: 1.18rem;
+  margin-bottom: 1.4rem;
+}
+.hero .btn {
+  background: #c1e1c1;
+  color: #2463a5;
+  font-weight: bold;
+  padding: 0.7rem 1.4rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(36,99,165,0.12);
+  transition: background .2s;
+}
+.hero .btn:hover {
+  background: #ffd966;
+  color: #333;
+}
+
+/* Secciones principales */
+.info, .niveles, .contacto {
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 2.2rem 1.3rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(36,99,165,0.08);
+  animation: fadeInUp 1.4s;
+}
+.info h2, .niveles h2, .contacto h2 {
+  color: #2463a5;
+  margin-bottom: 1.1rem;
+}
+
+.info ul {
+  margin-bottom: 1.2rem;
+  list-style: disc inside;
+  font-size: 1.07rem;
+}
+.info p {
+  font-size: 1.07rem;
+}
+
+/* Mapa de ubicación */
+.mapa {
+  margin-top: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(36,99,165,0.09);
+}
+
+/* Niveles educativos */
+.niveles-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  list-style: none;
+  justify-content: center;
+  margin-top: 12px;
+}
+.niveles-lista li {
+  background: #aeecef;
+  color: #2463a5;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 500;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(36,99,165,0.09);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.niveles-lista li:hover {
+  background: #ffd966;
+  color: #333;
+}
+
+/* Contacto y formulario */
+.contacto address {
+  font-style: normal;
+}
+.contacto address p, .contacto address a {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #222;
+  text-decoration: none;
+}
+.form-contacto {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-contacto label {
+  font-weight: 500;
+  color: #2463a5;
+}
+.form-contacto input, .form-contacto textarea {
+  border: 1px solid #b6d1f2;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.form-contacto input:focus, .form-contacto textarea:focus {
+  border-color: #2463a5;
+}
+.form-contacto button {
+  background: #2463a5;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.form-contacto button:hover {
+  background: #4f9deb;
+}
+
+/* Íconos sociales */
+.redes {
+  margin-top: 22px;
+  display: flex;
+  gap: 18px;
+  justify-content: flex-start;
+}
+.redes a {
+  font-size: 2rem;
+  color: #2463a5;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.redes a.whatsapp { color: #25D366; }
+.redes a.facebook { color: #2463a5; }
+.redes a:hover {
+  color: #ffd966;
+}
+
+/* Pie de página */
+footer {
+  background: #ffd966;
+  text-align: center;
+  padding: 1.1rem;
+  font-size: 1rem;
+  color: #2463a5;
+  letter-spacing: 1px;
+  border-top: 2px solid #aeecef;
+  margin-top: 28px;
+}
+
+/* Botón flotante de WhatsApp */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #25D366;
+  color: #fff;
+  font-size: 2.3rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(36,99,165,0.18);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-whatsapp:hover {
+  background: #128C7E;
+}
+
+/* Animaciones suaves */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsividad móvil */
+@media (max-width: 800px) {
+  header, .info, .niveles, .contacto {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .niveles-lista {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .btn-whatsapp {
+    right: 12px;
+    bottom: 12px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+  }
+}
